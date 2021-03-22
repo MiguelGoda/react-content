@@ -1,9 +1,13 @@
-import React from "react";
+import React, {useReducer} from "react";
+import useReducer from './UserReducer'
 
-const UserState = {
-  users: [],
-  selectedUser: null,
+const UserState = () => {
+  const initialState = {
+    users: [],
+    selectedUser: null
+  }
 };
+const [state,dispatch] = useState(useReducer, initialState) 
 
 const getUsers = () => {};
 
