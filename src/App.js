@@ -7,6 +7,8 @@ import UserList from "./components/UserList";
 //CONTEXT
 import UserState from './context/Users/UserState'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 function App() {
   return (
     <UserState>

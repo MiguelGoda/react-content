@@ -1,6 +1,6 @@
 import { GET_USERS, GET_PROFILE } from "../types";
 
-const estado = (state, action) => {
+export default (state, action) => {
   const { payload, type } = action;
 
   switch (type) {
@@ -18,4 +18,4 @@ const estado = (state, action) => {
       return state;
   }
 };
-export default estado;
+
