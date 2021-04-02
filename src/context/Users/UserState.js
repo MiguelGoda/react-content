@@ -3,7 +3,7 @@ import axios from "axios";
 
 import UserContext from "./UserContext";
 import UserReducer from "./UserReducer";
-import { GET_PROFILE } from "../types";
+import { GET_USERS ,GET_PROFILE } from "../types";
 
 const UserState = (props) => {
   const initialState = {
@@ -15,18 +15,18 @@ const UserState = (props) => {
 
   const getUsers = async () => {
     const res = await axios.get("https://reqres.in/api/users");
-    // console.log(res.data.data);
+    console.log(res.data.data);
     dispatch({
-      type: "GET_USERS",
-      Payload: res.data.data
+      type: GET_USERS,
+      Payload: res.data.data,
     });
   };
 
   const getProfile = async (id) => {
     const res = await axios.get("https://reqres.in/api/users/" + id);
     dispatch({
-      type: "GET_PROFILE",
-      Payload: res.data.data,
+      type: GET_PROFILE,
+      Payload: res.data.data
     });
   };
 
